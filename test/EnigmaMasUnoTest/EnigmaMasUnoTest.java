@@ -6,8 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import Encriptador.EncriptadorNaive;
+import Encriptador.IEncriptador;
 import EnigmaMasUno.EnigmaMasUno;
-import EnigmaMasUno.IEncriptador;
 
 public class EnigmaMasUnoTest {
 	

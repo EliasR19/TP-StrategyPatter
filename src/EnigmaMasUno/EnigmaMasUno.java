@@ -3,6 +3,8 @@ package EnigmaMasUno;
 import java.util.ArrayList;
 import java.util.List;
 
+import Encriptador.IEncriptador;
+
 public class EnigmaMasUno implements IEncriptador{
 	
 	private char[] vocales = {'a', 'e', 'i', 'o', 'u'};

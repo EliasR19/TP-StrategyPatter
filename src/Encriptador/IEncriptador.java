@@ -1,4 +1,4 @@
-package EnigmaMasUno;
+package Encriptador;
 
 public interface IEncriptador {
 	
