@@ -1,10 +1,11 @@
 package EnigmaMasUnoTest;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import EnigmaMasUno.EncriptadorNaive;
+import Encriptador.EncriptadorNaive;
 import EnigmaMasUno.EnigmaMasUno;
 import EnigmaMasUno.IEncriptador;
 

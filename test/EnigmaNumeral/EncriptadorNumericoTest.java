@@ -1,4 +1,4 @@
-package EnigmaMasUnoTest;
+package EnigmaNumeral;
 
 public class EncriptadorNumericoTest {
 

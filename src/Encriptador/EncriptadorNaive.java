@@ -1,4 +1,8 @@
-package EnigmaMasUno;
+package Encriptador;
+
+
+import EnigmaMasUno.EnigmaMasUno;
+import EnigmaMasUno.IEncriptador;
 
 public class EncriptadorNaive {
 	private IEncriptador encriptador = new EnigmaMasUno();
