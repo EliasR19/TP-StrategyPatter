@@ -9,30 +9,30 @@ public class EnigmaNumerico implements IEncriptador{
 	private char[] abecedario = "abcdefghijklmnñopqrstuvwxyz".toCharArray();
 	protected static List<Character> abecedarioList = new ArrayList<Character>();
 
+	//Se puede hacer con ASCII tambien.
+		
 	//Constructor
 	public EnigmaNumerico() {
 		this.abecedarioAList();
 	}
 	
-	
+	//Método para mandar a la clase del encriptador numeral.
 	public String enigma(String texto) {
 		String encriptadoTexto = "";
 		texto = texto.toLowerCase();
-		for(int x = 0; x < texto.length()-1; x++) {
-			if(abecedarioList.contains(this.getLetra(texto, x))) {
-				encriptadoTexto = encriptadoTexto +  String.valueOf( abecedarioList.indexOf(this.getLetra(texto, x))+1) + ",";
+		String[] letrasC = texto.split("");
+		for(int x = 0; x < letrasC.length-1; x++) {
+			if(abecedarioList.contains(texto.charAt(x))) {
+				encriptadoTexto = encriptadoTexto +  String.valueOf( abecedarioList.indexOf(texto.charAt(x))  +1 ) + ",";
 			}else {
 				encriptadoTexto = encriptadoTexto + "0" + ",";
 			}
 		}
-		encriptadoTexto = encriptadoTexto +  String.valueOf( abecedarioList.indexOf(this.getLetra(texto, texto.length()-1))+1);
+		encriptadoTexto = encriptadoTexto +  String.valueOf( abecedarioList.indexOf(texto.charAt( texto.length()-1) )  +1);
 		return encriptadoTexto;
 	}
 
-	private Object getLetra(String texto, int x) {
-		char[] textoC = texto.toCharArray();
-		return textoC[x];
-	}
+
 
 
 	@Override
@@ -58,7 +58,7 @@ public class EnigmaNumerico implements IEncriptador{
 		return transcricion + listaEncriptado.getLast();
 	}
 
-	
+	//Método prueba para mandar a la clase del desencriptador numeral.
 	public String enigma2(String texto) {
 		String encriptadoTexto = "";
 		texto = texto.toLowerCase();

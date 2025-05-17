@@ -26,6 +26,12 @@ public class EnigmaNumericoTest {
 		String texto = "Elias";
 		assertEquals("5,12,9,1,20", encriptador.enigma(texto));
 	}
+	@Test
+	public void desencriptador() {
+		EnigmaNumerico encriptador = new EnigmaNumerico();;
+		String texto = "5,12,9,1,20";
+		assertEquals("elias", encriptador.enigma2(texto));
+	}
 	
 	
 	@Test
